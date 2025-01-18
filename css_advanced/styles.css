@@ -209,38 +209,31 @@ blockquote {
 }
 
 .five {
-    display: flex; /* Use Flexbox for layout */
-    justify-content: center; /* Center the items horizontally */
-    margin-top: 10px; /* Space above the profile section */
-    gap: 30px; /* Reduced gap between tutorial items */
-    width: 1440px;
-
+    display: flex;                /* Use Flexbox for layout */
+    justify-content: center;      /* Center the items horizontally */
+    margin-top: 10px;            /* Space above the profile section */
+    gap: 30px;                   /* Space between tutorial items */
+    flex-wrap: wrap;             /* Allow wrapping on smaller screens */
 }
 
 .five > div {
-    text-align: center; /* Center the text within each profile */
-    margin: 5px; /* Reduced margin between profiles */
-    max-width: 200px; /* Optional: Limit max width for uniformity */
+    text-align: center;           /* Center the text within each profile */
+    margin: 5px;                 /* Reduced margin between profiles */
+    max-width: 200px;            /* Limit max width for uniformity */
+    flex: 1 1 auto;              /* Allow items to grow and shrink */
 }
 
 .five img {
-    margin-bottom: 5px; /* Reduced space below images */
-    width: 100%; /* Make images responsive */
-    
+    margin-bottom: 5px;          /* Space below images */
+    width: 100%;                 /* Make images responsive */
 }
 
 .heading h2 {
-    text-align: center; /* Center the heading */
-    margin-bottom: 15px; /* Reduced space below the heading */
-    font-size: 1.5em; /* Reduced font size */
+    text-align: center;           /* Center the heading */
+    margin-bottom: 15px;         /* Space below the heading */
+    font-size: 1.5em;            /* Font size */
 }
 
-.stars {
-    color: #C271FF; /* Star color */
-    font-size: 1.0em; /* Adjust star size */
-    gap: 40px;
-    
-}
 
 .five > div > div:last-child {
     display: flex; /* Use Flexbox for the stars and duration */
@@ -249,7 +242,7 @@ blockquote {
 }
 
 .five > div > div:last-child p {
-    margin-left: 15px; /* Reduced space between stars and duration */
+    margin-left: 0px; /* Reduced space between stars and duration */
     font-size: 0.9em; /* Reduced font size for duration */
 }
 
@@ -264,10 +257,24 @@ blockquote {
     margin-left: 70px;
 }
 
+.stars {
+    display: flex;                /* Use Flexbox */
+    align-items: center;          /* Center items vertically */
+}
+
+.stars .score {
+    margin-right: 10px;           /* Space between stars and time text */
+    color: #C271FF;               /* Star color */
+}
+
+.stars i {
+    font-size: 1.5em;             /* Ensure all stars are the same size */
+}
 .pic, .choosen{
     margin-top: 20px ;
     margin-bottom: 20px;
 }
+
 
 .six {
     background-color: #071629;
