@@ -1,0 +1,146 @@
+/* 0-styles.css */
+
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ff6565;
+  --secondary-color: #ffffff;
+  --background-color: #000000;
+  --font-family: "Source Sans Pro", Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+}
+
+/* Header styles */
+.hero {
+  background-image: url("images/headphones_hero_1.jpg"); /* Add a background image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  position: relative; /* Enable positioning of child elements */
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 50px;
+  position: absolute; /* Position navbar absolutely */
+  top: 0; /* Stick to the top */
+  left: 0; /* Stick to the left */
+}
+
+.logo {
+  margin-right: auto; /* Ensure space between logo and links */
+}
+
+.logo img {
+  height: 50px; /* Adjust logo size */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Space between links */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color); /* Change color on hover */
+}
+
+/* Hero text styles */
+.hero-text {
+  max-width: 600px; /* Limit the width of the text */
+  text-align: center; /* Center the text */
+  padding: 20px; /* Add some padding */
+  margin-top: 300px; /* Position lower by adjusting this value */
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px; /* Increased space below the heading */
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 30px; /* Increased space below the paragraph */
+}
+
+.shop-now {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 20px;
+  padding: 15px 20px; /* Padding for the button */
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.shop-now:hover {
+  opacity: 0.9; /* Slightly darken button on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav-links li {
+    margin: 10px 0; /* Space between vertical links */
+  }
+
+  .hero-text {
+    margin-top: 150px; /* Adjust margin for smaller screens if needed */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,460 @@
+/* 0-styles.css */
+
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ff6565;
+  --secondary-color: #ffffff;
+  --background-color: #000000;
+  --font-family: "Source Sans Pro", Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+}
+
+/* Header styles */
+.hero {
+  background-image: url("images/headphones_hero_1.jpg"); /* Add a background image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  position: relative; /* Enable positioning of child elements */
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 50px;
+  position: absolute; /* Position navbar absolutely */
+  top: 0; /* Stick to the top */
+  left: 0; /* Stick to the left */
+}
+
+.logo {
+  margin-right: auto; /* Ensure space between logo and links */
+}
+
+.logo img {
+  height: 50px; /* Adjust logo size */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Space between links */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color); /* Change color on hover */
+}
+
+/* Hero text styles */
+.hero-text {
+  max-width: 600px; /* Limit the width of the text */
+  text-align: center; /* Center the text */
+  padding: 20px; /* Add some padding */
+  margin-top: 300px; /* Position lower by adjusting this value */
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px; /* Increased space below the heading */
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 30px; /* Increased space below the paragraph */
+}
+
+.shop-now {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 20px;
+  padding: 15px 20px; /* Padding for the button */
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.shop-now:hover {
+  opacity: 0.9; /* Slightly darken button on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav-links li {
+    margin: 10px 0; /* Space between vertical links */
+  }
+
+  .hero-text {
+    margin-top: 150px; /* Adjust margin for smaller screens if needed */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+/* General Styles */
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+  line-height: 1.6; /* Improve readability */
+}
+
+/* What We Do Section */
+.what-we-do {
+  padding: 50px 20px; /* Add padding for spacing */
+  text-align: center; /* Center align text */
+  background-color: #1a1a1a; /* Dark background for contrast */
+}
+
+.what-we-do h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--primary-color); /* Use primary color */
+}
+
+.what-we-do p {
+  max-width: 800px; /* Limit paragraph width */
+  margin: 0 auto 40px; /* Center the paragraph */
+  font-size: 1.1rem;
+}
+
+/* Services Container */
+.services {
+  display: flex;
+  justify-content: space-around; /* Space out services evenly */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.service {
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Inner spacing */
+  width: 30%; /* Fixed width for larger screens */
+  max-width: 200px; /* Maximum width for service cards */
+  margin: 20px; /* Space between service cards */
+  text-align: center; /* Center align text */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.service:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.service i {
+  font-size: 3rem; /* Increase icon size */
+  color: var(--primary-color); /* Use primary color for icons */
+  margin-bottom: 10px; /* Space below icon */
+}
+
+.service h3 {
+  font-size: 1.5rem;
+  margin: 10px 0; /* Space above and below heading */
+}
+
+.service p {
+  font-size: 1rem;
+}
+
+/* Footer Styles */
+footer {
+  padding: 20px;
+  text-align: center; /* Center align footer text */
+  background-color: #1a1a1a; /* Match section background */
+  color: var(--secondary-color);
+}
+
+footer p {
+  margin: 0; /* Remove default margin */
+  font-size: 0.9rem; /* Smaller font for footer */
+}
+
+footer a {
+  color: var(--primary-color); /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+footer a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero-text {
+    margin-top: 150px; /* Adjust margin for smaller screens if needed */
+  }
+
+  .services {
+    flex-direction: column; /* Stack services vertically */
+    align-items: center; /* Center align services */
+  }
+
+  .service {
+    width: 80%; /* Use full width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .navbar {
+    flex-direction: column; /* Stack navbar items on smaller screens */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack links vertically */
+    gap: 10px;
+  }
+}
+
+.our-results {
+  background-image: url("images/headphones_hero_2.jpg");
+  height: 550px;
+  padding: 50px 20px; /* Add padding for spacing */
+  text-align: center; /* Center align text */
+  background-color: #1a1a1a; /* Dark background for contrast */
+}
+
+.our-results h2 {
+  font-size: 2.5rem;
+  margin-bottom: 90px; /* Space below heading */
+}
+
+.results {
+  display: flex;
+  justify-content: space-around; /* Space out results evenly */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.result {
+  position: relative; /* Enable absolute positioning for pseudo-elements */
+  width: 150px; /* Fixed width */
+  margin: 20px; /* Space between results */
+  padding: 20px; /* Inner spacing */
+  background-color: var(--primary-color); /* Use primary color */
+  border-radius: 20px; /* Rounded corners */
+  color: var(--secondary-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.result h3 {
+  font-size: 2rem; /* Size of percentage */
+  margin: 0; /* Remove default margin */
+}
+
+.result p {
+  font-size: 1rem; /* Size of description */
+}
+
+/* Pentagon shape using pseudo-element */
+.result::before {
+  content: "";
+  position: absolute;
+  top: -30px; /* Position above the box */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 75px solid transparent; /* Left side */
+  border-right: 75px solid transparent; /* Right side */
+  border-bottom: 30px solid var(--dark-secondary-color); /* Bottom side color */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .result {
+    width: 100px; /* Adjust width for smaller screens */
+  }
+
+  .result h3 {
+    font-size: 1.5rem; /* Adjust heading size */
+  }
+
+  .result p {
+    font-size: 0.9rem; /* Adjust paragraph size */
+  }
+}
+
+@media (max-width: 480px) {
+  .result {
+    width: 80%; /* Use full width on smaller screens */
+  }
+}
+
+.contact-us {
+  padding: 50px 20px; /* Add padding for spacing */
+  background-color: #1a1a1a; /* Dark background for contrast */
+  color: var(--secondary-color); /* Use secondary color for text */
+  text-align: center; /* Center align text */
+}
+
+.contact-us h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px; /* Space below heading */
+}
+
+.contact-us p {
+  margin-bottom: 30px; /* Space below paragraph */
+  font-size: 1.1rem; /* Font size for paragraph */
+}
+
+/* Form Styles */
+.contact-form {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  max-width: 600px; /* Limit form width */
+  margin: 0 auto; /* Center the form */
+  background-color: var(--dark-secondary-color); /* Form background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Inner padding */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.form-group {
+  margin-bottom: 20px; /* Space between form groups */
+}
+
+label {
+  display: block; /* Make label block-level */
+  margin-bottom: 5px; /* Space below label */
+  font-weight: bold; /* Bold label text */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%; /* Full width of the container */
+  padding: 10px; /* Inner padding */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1rem; /* Font size */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: var(--primary-color); /* Change border color on focus */
+  outline: none; /* Remove outline */
+}
+
+.submit-btn {
+  background-color: var(--primary-color); /* Button background color */
+  color: var(--secondary-color); /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 20px; /* Rounded corners */
+  padding: 10px 15px; /* Inner padding */
+  font-size: 1.1rem; /* Font size */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s, opacity 0.3s; /* Smooth transitions */
+  width: fit-content; /* Set button width to fit content */
+  align-self: center; /* Center the button */
+  margin-top: 10px; /* Space above the button */
+}
+
+.submit-btn:hover,
+.submit-btn:active {
+  opacity: 0.9; /* Darken button on hover/active */
+}
+
+/* Link hover/active styles */
+.contact-form a {
+  color: var(--secondary-color); /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.contact-form a:hover,
+.contact-form a:active {
+  color: #ff6565; /* Change link color on hover/active */
+}
+
+.submit-btn:hover {
+  background-color: darken(
+    var(--primary-color),
+    10%
+  ); /* Darken button on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact-us h2 {
+    font-size: 2rem; /* Adjust heading size */
+  }
+
+  .contact-us p {
+    font-size: 1rem; /* Adjust paragraph size */
+  }
+
+  .contact-form {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-us h2 {
+    font-size: 1.5rem; /* Further adjust heading size */
+  }
+
+  .contact-us p {
+    font-size: 0.9rem; /* Further adjust paragraph size */
+  }
+}
